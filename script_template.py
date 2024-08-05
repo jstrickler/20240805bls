@@ -26,5 +26,9 @@ def function1():
     """
     print("this is function1()")
 
+# code here is always executed
+
 if __name__ == '__main__':
+    # code here is only executed when script is run directly (not imported)
     main(sys.argv[1:])  # Pass command line args (minus script name) to main()
+    print("Hi Mom!")

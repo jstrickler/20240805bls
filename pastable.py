@@ -55,4 +55,3 @@ colors = ['red', 'green', 'purple', 'orange', 'brown',
           'pink', 'chartreuse']
 
 
-
