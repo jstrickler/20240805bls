@@ -1,4 +1,4 @@
-from geometry import *
+from EXAMPLES.my_package.mathlib.geometry import *   # import all; skip _*
 
 a1 = circle_area(8)
 a2 = rectangle_area(10, 12)

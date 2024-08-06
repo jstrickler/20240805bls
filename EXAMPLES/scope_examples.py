@@ -1,8 +1,10 @@
 
 x = 42  # global variable
 
+# local -> nonlocal -> global -> builtin
 
 def function_a():
+    z = "zebra"
     y = 5  # local variable to function_a(), or nonlocal to function_b()
 
     def function_b():

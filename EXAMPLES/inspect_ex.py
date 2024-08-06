@@ -1,5 +1,5 @@
 import inspect
-import geometry
+import EXAMPLES.my_package.mathlib.geometry as geometry
 from carddeck import CardDeck
 
 deck = CardDeck("Leonard")
