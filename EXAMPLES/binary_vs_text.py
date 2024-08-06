@@ -1,5 +1,6 @@
+import requests
 
-message = "72\u00B0C"
+message = "72\u00B0C  spam\u00B2    \u00B13 gallons"   # \uXXXX   \UXXXXXXXX
 print(f"message: {message}")
 print(f"type(message): {type(message)}")
 print(f"len(message): {len(message)}")
@@ -17,3 +18,9 @@ print()
 
 original_message = binary_message.decode()
 print(f"original_message: {original_message}")
+
+response = requests.get('https://www.python.org')
+print(len(response.content))
+print(len(response.text))
+
+

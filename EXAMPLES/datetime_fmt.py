@@ -17,3 +17,5 @@ print()
 
 print(gates_bd.strftime('log entry: %Y-%m-%d'))  # Format using strftime()
 print()
+
+print(gates_bd.strftime('BORN: %X %x'))

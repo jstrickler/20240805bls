@@ -1,5 +1,5 @@
 
-values = ['a', 'b', 'c', 'd', 'e']  # values has 6 elements
+values = ['a', 'b', 'c', 'd', 'e']  # values has 5 elements
 
 x, y, *z = values  # {splat} takes all extra elements from iterable
 print(f"x: {x}    y: {y}    z: {z}\n")
@@ -22,5 +22,9 @@ people = [
 ]
 
 for *name, _ in people:  # name gets all but the last field
+    print(name)
+print()
+
+for name, *_ in people:  # name gets all but the last field
     print(name)
 print()

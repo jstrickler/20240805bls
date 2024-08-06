@@ -21,5 +21,7 @@ def strip_article(title):  # create function which takes element to compare and 
     return title
 
 
-for book in sorted(books, key=strip_article):  # sort using custom function
+for book in sorted(books, key=strip_article, reverse=True):  # sort using custom function
     print(book)
+
+

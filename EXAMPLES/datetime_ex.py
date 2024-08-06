@@ -18,10 +18,15 @@ print(f"now.second: {now.second}")
 print(f"now.microsecond: {now.microsecond}")
 print()
 
+#              Y    M   D  H  M    S   mS
 d1 = datetime(2018, 6, 13, 4, 55, 27, 8082)  # create a date object
 d2 = datetime(2018, 8, 24)
 delta = d2 - d1  # date objects can be subtracted from other date objects
 
 print(f"delta: {delta}")  # timedelta has days, seconds, and microseconds
 print(f"delta.days: {delta.days}")
+
+nine_eleven = date(2001, 9, 11)
+delta = today - nine_eleven
+print(f"9/11 happened {delta.days/365:.1f} years ago")
 
