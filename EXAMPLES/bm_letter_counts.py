@@ -13,7 +13,7 @@ code_snippets = [
     '''count = alice_text.lower().count('a')''',
     '''count = len(re.findall(r'[aA]', alice_text))''',
     '''count = len(re.findall('a', alice_text, re.I))''',
-    '''count = alice_bytes.count(65) + alice_bytes.count(97)''',
+    '''count = alice_bytes.count(b'a') + alice_bytes.count(b'A')''',
 ]
 
 for code_snippet in code_snippets:

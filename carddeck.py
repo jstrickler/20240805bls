@@ -1,7 +1,11 @@
+"""
+Provide CardDeck class
+"""
 import random
 from card import Card
 
 class CardDeck:
+    "Represent a deck of cards"
     RANKS = "2 3 4 5 6 7 8 9 10 J Q K A".split()
     SUITS = "Clubs Diamonds Hearts Spades".split()
 
@@ -16,7 +20,7 @@ class CardDeck:
             for rank in self.RANKS:
                 card = Card(rank, suit)
                 self._cards.append(card)
-    
+
     @property
     def cards(self):
         return self._cards
@@ -53,10 +57,28 @@ if __name__ == "__main__":
     print(f"{d1.cards = }")
     for _ in range(5):
         print(d1.draw())
-    
+
     d2 = CardDeck()
     print(f"{d2.get_ranks() = }")
     print(f"{CardDeck.get_ranks() = }")
-    print(CardDeck.__len__(d1))
-    print(f"{d1.__len__() = }")
+    # print(CardDeck.__len__(d1))
+    # print(f"{d1.__len__() = }")
     print(len(d1))
+    print('-' * 60)
+
+    print(getattr(d1, 'cards'))
+    s = getattr(d1, "shuffle")
+    s()
+
+    #
+    if hasattr(d1, "shuffle"):
+        d1.shuffle()
+    else:
+        print("unable to shuffle")
+
+    setattr(CardDeck, "color", "orange")
+    print(CardDeck.color)
+
+    setattr(CardDeck, "hello", lambda self: print("Hello!"))  # monkeypatch
+
+    d1.hello()

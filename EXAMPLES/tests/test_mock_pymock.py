@@ -1,4 +1,3 @@
-import pytest  # Needed for test runner
 from spamlib import spam
 
 SEARCH_TERM = 'bug'
@@ -15,6 +14,3 @@ def test_spam_search_calls_re_search(mocker):   # Unit test
     # Check that method was called just once with the expected parameters
     spam.re.search.assert_called_once_with(SEARCH_TERM, SEARCH_STRING)  
 
-
-if __name__ == '__main__':
-    pytest.main([__file__, '-s', '-v'])   # Start the test runner
