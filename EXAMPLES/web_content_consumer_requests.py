@@ -33,9 +33,9 @@ def main(args):
                 print()
             else:
                 print(entry)
-        print('*' * 60)
-        pprint(data)
-        print('*' * 60)
+        # print('*' * 60)
+        # pprint(data)
+        # print('*' * 60)
     else:
         print("Sorry, HTTP response", response.status_code)
 

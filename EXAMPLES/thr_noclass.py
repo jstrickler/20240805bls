@@ -1,4 +1,3 @@
-
 from threading import Thread, Lock
 import random
 import time
@@ -15,5 +14,5 @@ for i in range(16):
     t = Thread(target=my_task, args=(i,))  # create thread
     t.start()  # launch thread
 
-print("Done.")  # "Done" is printed immediately -- the threads are "in the background"
+print("***Done***")  # "Done" is printed immediately -- the threads are "in the background"
 

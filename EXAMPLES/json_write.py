@@ -1,5 +1,7 @@
-
+from datetime import date
 import json
+
+today = date.today()
 
 george = [
     {

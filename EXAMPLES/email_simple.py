@@ -22,6 +22,8 @@ smtp = smtplib.SMTP("smtp2go.com", 2525)  # connect to SMTP server
 smtp.login(SMTP_USER, SMTP_PASSWORD)  # log into SMTP server
 
 msg = EmailMessage()  # create empty email message
+
+#  def __setvalue__(key, value): ...
 msg.set_content(MESSAGE_BODY)  # add the message body
 msg['Subject'] = MESSAGE_SUBJECT  # add the message subject
 msg['from'] = SENDER  # add the sender address
@@ -35,3 +37,4 @@ else:
     print("Mail sent.")
 finally:
     smtp.quit()  # disconnect from SMTP server
+

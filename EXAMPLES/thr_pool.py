@@ -12,6 +12,9 @@ thread_pool = Pool(POOL_SIZE) # create pool
 
 word_list = thread_pool.map(my_task, WORDS) # map elements across all threads
 
+print("BEFORE:")
+print(WORDS[:20])
+print("AFTER:")
 print(word_list[:20])
 
 print(f"Processed {len(word_list)} words.")
